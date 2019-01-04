@@ -59,7 +59,7 @@ const autoCorrelation = (sequence, period = 10) => {
 
     for(let d = 0; d < period + 1; d++){
         let shifted = Array.prototype.concat(
-            sequence.slice(sequence.length - d,sequence.length),sequence.slice(0,sequence.length - d)
+            sequence.slice(sequence.length - d),sequence.slice(0,sequence.length - d)
         )
        
         autoCorrelation[d] = 0

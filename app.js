@@ -20,7 +20,7 @@ class App{
         LSFR.getPolynomInfo(period1, 2 ** deg1 - 1)
 
 
-        let q1 = LSFR.generateLSFR1(period1,deg1).map((item) => +item)
+        let q1 = LSFR.generateLSFR1(period1 - 1,deg1).map((item) => +item)
 
         LSFR.autoCorrelation(q1)
 
@@ -42,7 +42,7 @@ class App{
 
         LSFR.getPolynomInfo(period2, 2 ** deg2 - 1)
 
-        let q2 = LSFR.generateLSFR1(period2,deg2).map((item) => +item)
+        let q2 = LSFR.generateLSFR1(period2 - 1,deg2).map((item) => +item)
         LSFR.autoCorrelation(q2)
 
         for(let i = 1; i < 3; i++){
